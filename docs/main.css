@@ -1,0 +1,12 @@
+.head1 {
+    color: #003e57;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 21px;
+}
