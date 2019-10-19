@@ -10,3 +10,9 @@ p {
   text-align: center;
   font-size: 21px;
 }
+
+.video-js {
+	/*position: absolute;*/
+	margin: 0 auto;
+}
+
