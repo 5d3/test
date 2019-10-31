@@ -3,10 +3,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" type="text/css" href="main.css" />
-  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="libs/jquery-3.4.1.js"></script>
+  <!-- script type="text/javascript" src="libs/jquery-3.4.1.min.js"></script -->
   
   <link rel="stylesheet" type="text/css" href="video-js.min.css"/>
-  <script type="text/javascript" src="video.min.js"></script>
+  <!-- script type="text/javascript" src="video.min.js"></script -->
+  
+  <!-- script type="text/javascript" src="mediaelement-and-player.min.js"></script -->
+  <link rel="stylesheet" type="text/css" href="mediaelementplayer.css" />
 </head>
 <body>
 <h1 class="head1">It's all gone to HEVEL without Jesus</h1>
@@ -29,11 +33,32 @@ A God bigger than the hevel, A GOD WENT THROUGH HEVEL so you could know security
   data-setup='{}'>
   <source src="videos/ttt.mp4" type="video/mp4"></source>
    <track kind="subtitles" src="videos/ttt.vtt" srclang="en" label="English&Chinese" default />
-
+  <!-- if you load the .vtt file by using file:/// on the firefox >= v68, the subtitles may not be displayed for cors reason, please set privacy.file_unique_origin to fasle in about:config -->
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
   </p>
 </video>
 
+<script>
+
+		 
+</script>
+
+<script type="text/javascript" src="myvideo.js"></script>
+<!--  video
+  id="player1"
+  class="mejs-ted"
+  controls="controls"
+  preload="auto"
+  height="320"
+  width="640"
+  poster=""
+  src="videos/ttt.mp4" 
+  type="video/mp4"
+  >
+  
+   <track kind="subtitles" src="videos/ttt.vtt" srclang="en" label="English&Chinese" default />
+
+</video -->
 </body>
 </html>
