@@ -1,3 +1,4 @@
+
 .head1 {
     color: #003e57;
     text-transform: uppercase;
@@ -14,5 +15,12 @@ p {
 .video-js {
 	/*position: absolute;*/
 	margin: 0 auto;
+}
+
+.subtitle {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+
 }
 

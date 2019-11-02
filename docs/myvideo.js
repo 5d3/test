@@ -1,21 +1,27 @@
+if (typeof jQuery != 'undefined') {
+  console.log("jQuery.version is: " + jQuery.fn.jquery);
+}
 
 $(document).ready(function(){
-  if (typeof jQuery != 'undefined') {
-    console.log("jQuery.version is: " + jQuery.fn.jquery);
-  }
-
   $("#my-player").on("timeupdate", () => {
     //player.displayCaptions();
     console.log("--"); 
   });
   //var vid = document.getElementById("my-player");
 
-  var vid = $("#my-player");
-  vid.on("timeupdate", () => {
+  var vid = $("#my-player").get(0); //the jQuery method of get(0) returns the DOM element itself
+  $(vid).on("timeupdate", () => {   //use the $() to wrap a DOM to a jQuery-wrapped DOM element.
     //player.displayCaptions();
-    console.log("--" + vid[0].currentTime + "/" + vid[0].duration + " : " + vid[0].textTracks[0] + " crossOrigin: " + vid[0].crossOrigin );
-    if(vid[0].currentTime > 15){
-      vid[0].currentTime = 0;
+    console.log("--" + vid.currentTime + "/" + vid.duration + " : " + vid.textTracks[0] + " crossOrigin: " + vid.crossOrigin );
+    if(vid.currentTime > 15){
+      vid.currentTime = 0;
     }
   }); 
+  
+  //var sub = document.createElement( "div" );
+  sub = $("<div>Hello jQuery</div>");
+  sub.addClass("subtitle");
+
+  $(vid).after(sub);
+
 });		
