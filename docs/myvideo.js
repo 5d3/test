@@ -18,14 +18,28 @@ $(document).ready(function(){
   var sub = $("<div>Hello jQuery</div>");
   sub.addClass("subtitle");
   $(vid).after(sub);
-  var sub_ul = $("<ul></ul>");
-  if(vid.textTracks[0].cues) {
-    $.each(vid.textTracks[0].cues, (index, cue) => {
-      console.log(cue);
-      console.log(index + " : " + cue.startTime + " : " + cue.endTime + " : " + cue.text);
-      var msg = cue.text + "</li>";
-      $(sub).append("<div>" + cue.text + "</div>");
-    });
+
+  if(vid.textTracks[0]) {
+    vid.textTracks[0].oncuechange = () => {
+      console.log("oncuechange fired.");
+    }
+    vid.textTracks.onchange = () => {
+      console.log("onchange fired.");
+    }
+    vid.textTracks.onaddtrack = () => {
+      console.log("onaddtrack fired.");
+    }
+    vid.textTracks[0].onchange = () => {
+
+      if(vid.textTracks[0].cues) {
+        $.each(vid.textTracks[0].cues, (index, cue) => {
+          console.log(cue);
+          console.log(index + " : " + cue.startTime + " : " + cue.endTime + " : " + cue.text);
+          var msg = cue.text + "</li>";
+          $(sub).append("<div>" + cue.text + "</div>");
+        });
+      }
+    }
   }
   
   $(vid).on("timeupdate", () => {   //use the $() to wrap a DOM to a jQuery-wrapped DOM element.
