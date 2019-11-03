@@ -23,12 +23,16 @@ $(document).ready(function(){
     vid.textTracks[0].oncuechange = () => {
       console.log("oncuechange fired.");
     }
-    vid.textTracks.onchange = () => {
+    vid.textTracks.onchange = (e) => {
       console.log("onchange fired.");
     }
-    vid.textTracks.onaddtrack = () => {
+    vid.textTracks.onaddtrack = (e) => {
       console.log("onaddtrack fired.");
     }
+    
+    vid.textTracks.addEventListener("addtrack", (e) => {console.log("addtrack fired.")}, false);
+    
+    
     vid.textTracks[0].onchange = () => {
 
       if(vid.textTracks[0].cues) {
