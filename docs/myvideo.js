@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 window.addEventListener('load', (event) => {
     console.log('window.load - DOM fully loaded and parsed');
+    var vid1 = $("#my-player").get(0);
 });
 
 window.onload = () => {
