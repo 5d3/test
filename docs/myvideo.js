@@ -33,10 +33,29 @@ window.onload = () => {
           }
         })
         console.log("PPPPPP " + idx);
+        
+        $(".currentsub").removeClass("currentsub"); //remove the class for the previous cue.
         var div = $(".subtitle div").get(idx);
-        $(div).toggleClass("currentsub");
-      } else {  //the length == 0, it's the correct time to clear ".currentsub" class
-        $(".currentsub").toggleClass("currentsub");
+        $(div).toggleClass("currentsub");   // set the class for the current cue.
+        console.log("TTTTTTTTTTTTTTT:" + div.offsetTop);
+        console.log("TTTTTTTTTTTTTTT:" + div.offsetParent);
+
+        var pos = $(div).position().top;
+        //$(sub).scrollTop = $(sub).scrollTop + $(div).clientHight;
+        $(sub).get(0).scrollTop = div.offsetTop - $(sub).get(0).offsetTop - $(sub).get(0).offsetHeight/2;
+        
+        console.log("VVVVVVVVV Body, offsetTop: " + $("body").get(0).offsetTop);
+        console.log("VVVVVVVVV H1, offsetTop: " + $("body").get(0).offsetTop);
+        console.log("VVVVVVVVV Video, offsetTop: " + $("video").get(0).offsetTop);
+        console.log("VVVVVVVVV Subtitle, offsetTop: " + $(sub).get(0).offsetTop);
+        console.log("VVVVVVVVV offsetHeight: " + $(sub).get(0).offsetHeight);
+        console.log("VVVVVVVVV offsetTop: " + div.offsetTop);
+
+        console.log("VVVVVVVVV scrollTop: " + $(sub).get(0).scrollTop);
+        
+//        $(sub).animate({scrollTop: div.offsetTop},3);
+      } else {  //the length == 0, which means a cue reached its stopTime, it's a time point to clear ".currentsub" class
+        //$(".currentsub").toggleClass("currentsub");
       }
     });
   
@@ -62,7 +81,7 @@ window.onload = () => {
         console.log(cue);
         console.log(index + " : " + cue.startTime + " : " + cue.endTime + " : " + cue.text);
 
-        $(sub).append("<div starttime=" + cue.startTime + " endTime=" + cue.endTime + ">" + cue.text + "</div>");
+        $(sub).append("<a href='#'><div starttime=" + cue.startTime + " endTime=" + cue.endTime + ">" + cue.text + "</div></a>");
       });
     }
       
@@ -76,6 +95,12 @@ window.onload = () => {
 //-------        console.log("====" + sub0.text);
         //sub[0].innerText = sub0.text;
       }
+    });
+    
+    $("a").on("click", (evt) => {
+      var startTimeOfSelectedCue = $(evt.target).attr("startTime");
+
+      vid.currentTime = startTimeOfSelectedCue;
     });
   }
 }

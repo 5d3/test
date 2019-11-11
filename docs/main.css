@@ -17,16 +17,16 @@ p {
 	margin: 0 auto;
 }
 .my-player {
-  height: 480px;
+  height: 320px;
   //width: 640px;
 }
 
 .subtitle {
   width: 50%;
-  margin: 20px auto;
-  padding-top: 24px;
+  margin: 10px auto;
+  padding-top: 10px;
   text-align: center;
-  height: 480px;
+  height: 320px;
   border: 1px black solid;
   overflow-y: scroll;
 
@@ -35,9 +35,16 @@ p {
   scrollbar-color: blue;  /*auto/dark/light/<color>*/
 
 }
+.subtitle a {
+  text-decoration: none;
+}
+.subtitle a:visited {
+  text-decoration: none;
+}
 
 .currentsub {
-  text-shadow: 5px 1px 18px red
+  text-shadow: 5px 1px 22px red;
+  font-weight: bold;
 }
 
 div::-webkit-scrollbar {
