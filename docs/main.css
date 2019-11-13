@@ -16,24 +16,96 @@ p {
 	/*position: absolute;*/
 	margin: 0 auto;
 }
-.my-player {
-  height: 320px;
-  //width: 640px;
+
+.video-container {
+  width: 90%;
+  //height: 320px;
+  margin-left: 5%;
+  margin-top: 5px;
+
+  display: flex;
+  display: -webkit-flex;
+  
+}
+  
+  
+@media (min-width: 800px) {
+  .video-container {
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    
+    border: 1px blue solid;
+  }
+  
+  .my-player {
+    width: 50%;
+  }
+  
+  .subtitle {
+    width: 50%;
+    height: 0;
+    padding-bottom: 28%;  /*if the padding value is a percentage, it means the height will be the 30% of the it's parent's width*/
+    //padding-top: 100px;
+    text-align: center;
+    
+    //border: 1px black solid;
+    overflow-y: scroll;
+    
+    font-family: Arial,Helvetica,sans-serif;
+    scrollbar-width: thin;  /*for Firefox. auto/thin/none;*/
+    scrollbar-color: blue;  /*auto/dark/light/<color>*/
+  }
+  
+  .my-player.separate-left {  /*There's no space between two classes, 这表示同时有这两个classes时选中。 如果有空格，表示在第一个class的内部有第二个class的选中*/
+    width: 40%;
+  }
+  .subtitle.separate-left {
+    width: 60%;
+    height: 0;
+    padding-bottom: 22.5%;
+  }
+  
+  .my-player.separate-right {
+    width: 60%;
+  }
+  .subtitle.separate-right {
+    width: 40%;
+    height: 0;
+    padding-bottom: 33.7%;
+  }
 }
 
-.subtitle {
-  width: 50%;
-  margin: 10px auto;
-  padding-top: 10px;
-  text-align: center;
-  height: 320px;
-  border: 1px black solid;
-  overflow-y: scroll;
 
-  font-family: Arial,Helvetica,sans-serif;
-  scrollbar-width: thin;  /*for Firefox. auto/thin/none;*/
-  scrollbar-color: blue;  /*auto/dark/light/<color>*/
 
+@media (max-width: 799px) {
+  .video-container {
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    
+    width: 95%;
+    margin-left: 2%;
+  }
+  
+  .my-player {
+    width: 100%;
+    //margin-left: 5%;
+  }
+
+  .subtitle {
+    width: 100%;
+    margin: 5px 0;
+    padding-top: 100px;
+    text-align: center;
+    height: 320px;
+
+    border: 1px black solid;
+    overflow-y: scroll;
+
+    font-family: Arial,Helvetica,sans-serif;
+    scrollbar-width: thin;  /*for Firefox. auto/thin/none;*/
+    scrollbar-color: blue;  /*auto/dark/light/<color>*/
+
+  }
 }
 .subtitle a {
   text-decoration: none;
