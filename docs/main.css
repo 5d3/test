@@ -1,4 +1,8 @@
 
+:root {
+  --the_width: 800px; /*var(--the_width)*/
+}
+
 .head1 {
     color: #003e57;
     text-transform: uppercase;
@@ -12,17 +16,101 @@ p {
   font-size: 21px;
 }
 
+#video-bg {
+  position:relative;
+}
+
 .video-js {
 	/*position: absolute;*/
 	margin: 0 auto;
 }
 
-.video-container {
+.video-list {
   width: 90%;
   //height: 320px;
-  margin-left: 5%;
-  margin-top: 5px;
+  //margin-left: 5%;
+  //margin-top: 5px;
+  margin: auto;
+  text-align:center;
+  /*padding-left: auto;
+  padding-right: auto;*/
 
+  display: flex;
+  display: -webkit-flex;
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  
+  
+}
+
+.video-list a {
+  display: inherit;
+  width: 49%;
+  border: 2px white solid;
+  padding: 2px;
+}
+
+.video-list a:hover {
+  border: 2px blue solid;
+  
+}
+
+#video-container-bg {
+  display: none;
+  
+  position:absolute;
+  top:0px;
+  //left:10px;
+  margin: auto;
+  position: fixed;
+  overflow: hidden;
+
+  width: 100%;
+	height: 100%;
+  z-index: 99;
+  
+  background: rgba(241,210,194, 0.8);
+/*
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(241,210,194,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+  background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+*/
+  //learn lightbox by: https://tympanus.net/Tutorials/CSS3Lightbox/
+}
+
+#video-container-bg a.video-close{
+	background: rgba(27,54,81,0.8);
+	z-index: 1001;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 48.4%;
+	font-size: 15px;
+//	line-height: 26px;
+	text-align: center;
+	width: 50px;
+	height: 23px;
+	overflow: hidden;
+	margin-left: -25px;
+	opacity: 10;
+	filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+}
+
+.video-container {
+  
+
+  width: 90%;
+  //height: 320px;
+  
+  margin: auto;
   display: flex;
   display: -webkit-flex;
   
@@ -38,7 +126,7 @@ p {
   }
   
   .my-player {
-    width: 50%;
+    width: 60%;
   }
   
   .subtitle {

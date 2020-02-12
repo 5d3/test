@@ -1,55 +1,53 @@
 {
-  medias: [
-    movies: [
-      { //The movie
-        name: "遗愿清单(The Bucket List)"，
-        sections: [
-          {
-            video: "The Bucket List 1.mp4",
-            sub: "The Bucket List 1.vtt",
-            poster: "The Bucket List 1.png"
-          },
-          {
-            video: "The Bucket List 2.mp4",
-            sub: "The Bucket List 2.vtt",
-            poster: "The Bucket List 2.png"
-          },
-          {
-            video: "The Bucket List 3.mp4",
-            sub: "The Bucket List 3.vtt",
-            poster: "The Bucket List 3.png"
-          },
-          {
-            video: "The Bucket List 4.mp4",
-            sub: "The Bucket List 4.vtt",
-            poster: "The Bucket List 4.png"
-          },
-          {
-            video: "The Bucket List 5.mp4",
-            sub: "The Bucket List 5.vtt",
-            poster: "The Bucket List 5.png"
-          },
-          {
-            video: "The Bucket List 6.mp4",
-            sub: "The Bucket List 6.vtt",
-            poster: "The Bucket List 6.png"
-          }
-        ]
-      }，
-      
-      { //The movie
-        name: "The good doctor S01E07",
-        sections: [
-          {
-            video: "The good doctor 0107.mp4",
-            sub: "The good doctor 0107.vtt",
-            poster: ""
-          }
-        ]
-      }，
-      
-      { //The movie
-      }
-    ]
+  "movies": [
+    {
+      "name": "遗愿清单(The Bucket List)",
+      "sections": [
+        {
+          "video": "The Bucket List 1.mp4",
+          "sub": "The Bucket List 1.vtt",
+          "poster": "The Bucket List 1.png"
+        },
+        {
+          "video": "The Bucket List 2.mp4",
+          "sub": "The Bucket List 2.vtt",
+          "poster": "The Bucket List 2.png"
+        },
+        {
+          "video": "The Bucket List 3.mp4",
+          "sub": "The Bucket List 3.vtt",
+          "poster": "The Bucket List 3.png"
+        },
+        {
+          "video": "The Bucket List 4.mp4",
+          "sub": "The Bucket List 4.vtt",
+          "poster": "The Bucket List 4.png"
+        },
+        {
+          "video": "The Bucket List 5.mp4",
+          "sub": "The Bucket List 5.vtt",
+          "poster": "The Bucket List 5.png"
+        },
+        {
+          "video": "The Bucket List 6.mp4",
+          "sub": "The Bucket List 6.vtt",
+          "poster": "The Bucket List 6.png"
+        }
+      ]
+    },
+    
+    {
+      "name": "The good doctor S01E07",
+      "sections": [
+        {
+          "video": "The good doctor 0107.mp4",
+          "sub": "The good doctor 0107.vtt",
+          "poster": "The good doctor 0107.png"
+        }
+      ]
+    },
+    
+    {
+    }
   ]
 }
