@@ -131,14 +131,14 @@ window.onload = () => {
       
 
 
-      $("#video-container-bg .video-container").prepend('<video class="my-player" controls preload="auto" poster="' + poster + '" data-setup="{}"></video>');
-      var my_v = $("#video-container-bg .video-container .my-player").get(0);
+      $("#video-container-bg .video-container .video-bg").prepend('<video class="my-player" controls preload="auto" poster="' + poster + '" data-setup="{}"></video>');
+      var my_v = $("#video-container-bg .video-container .video-bg .my-player").get(0);
 
       
       
       $(my_v).prepend('<source src="' + vName + '" type="video/mp4">' + '<track kind="subtitles" src="' + vttName + '" srclang="en" label="English&amp;Chinese" default>');
-      
-      $("#video-container-bg .video-container track").get(0).onload = (evtt) => {
+      console.log($("#video-container-bg .video-container .video-bg .my-player track").get(0));
+      $("#video-container-bg .video-container .video-bg .my-player track").get(0).onload = (evtt) => {
         console.log("onload");
         console.log(evtt.target.track);
 
@@ -187,7 +187,8 @@ window.onload = () => {
       
       var sub = $("<div>Hello jQuery</div>");
       sub.addClass("subtitle");
-      $(my_v).after(sub);
+      var v_bg = $("#video-container-bg .video-container .video-bg").get(0);
+      $(v_bg).after(sub);
       
       
       $(my_v.textTracks[0]).on("cuechange", (ev) => {
@@ -259,7 +260,8 @@ window.onload = () => {
 
     $("#video-container-bg").on("click", (evt) => {
       $("#video-container-bg").hide();
-      $("#video-container-bg .video-container").children().remove();
+      $("#video-container-bg .video-container .video-bg").children().remove();
+      $("#video-container-bg .video-container .video-bg").siblings().remove();
     });
   }
 }

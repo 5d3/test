@@ -3,6 +3,7 @@
   --the_width: 800px; /*var(--the_width)*/
 }
 
+
 .head1 {
     color: #003e57;
     text-transform: uppercase;
@@ -30,7 +31,7 @@ p {
   font-size: 21px;
 }
 
-#video-bg {
+#media-bg {
   position:relative;
 }
 
@@ -73,7 +74,7 @@ p {
 	height: 100%;
   z-index: 99;
   
-  background: rgba(241,210,194, 0.8);
+  background: rgba(241,210,194, 0.9);
 /*
   background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(241,210,194,1)));
@@ -108,7 +109,7 @@ p {
 }
 
 .video-container {
-  width: 95%;
+  width: 98%;
   margin: auto;
 
   display: flex;
@@ -132,7 +133,7 @@ p {
 }
 
   
-@media (min-width: 800px) {
+@media (orientation: landscape), (min-width: 800px) {
   body {
     background-color: darkgreen;
   }
@@ -148,23 +149,29 @@ p {
 
   
   .video-container {
+    height: 100vh;
     -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
     //border: 1px blue solid;
   }
   
+  .video-bg {
+    width: 40%;
+    background: rgba(195,195,240, 0.68);
+  }
+  
   .my-player {
-    width: 50%;
+    width: 100%;
   }
   
   .subtitle {
-    width: 50%;
-    height: 0;
-    padding-bottom: 28%;  /*if the padding value is a percentage, it means the height will be the 30% of the it's parent's width*/
+    width: 60%;
+    height: 100%;
+    //padding-bottom: 28%;  /*if the padding value is a percentage, it means the height will be the 30% of the it's parent's width*/
   }
   
   #video-container-bg a.video-close{
-    left: 47%;
+    left: 38%;
   }
     
   /*
@@ -190,7 +197,7 @@ p {
 
 
 
-@media (max-width: 799px) {
+@media (orientation: portrait), (max-width: 799px) {
   body {
     background-color: lightgreen;
   }
@@ -207,6 +214,10 @@ p {
     -webkit-flex-flow: column nowrap;
     flex-flow: column nowrap;
     height: 100%;
+  }
+  
+  .video-bg {
+    width: 100%;
   }
   
   .my-player {
