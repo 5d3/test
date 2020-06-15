@@ -130,6 +130,7 @@ p {
   scrollbar-width: thin;  /*for Firefox. auto/thin/none;*/
   scrollbar-color: blue;  /*auto/dark/light/<color>*/
 
+  font-size: 24px;
 }
 
   
