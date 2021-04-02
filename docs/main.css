@@ -57,7 +57,7 @@ p {
 }
 
 .video-list img {
-  width: -webkit-fill-available;
+  max-width: 100%;
 }
 
 #video-container-bg {
