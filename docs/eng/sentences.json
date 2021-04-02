@@ -1,0 +1,48 @@
+{
+  "a": "audio",
+  "t": "text",
+  "m": "meaning",
+  "w": "words",
+  
+  "sentences": [
+
+    {
+      "a": "BLE peripheral advertising.mp4",
+      "t": "When a BLE peripheral device is in advertising mode, advertising packets are sent periodically on each advertising channel.",
+      "w": ["peripheral", "advertising", "periodically"]
+    },
+ 
+    {
+      "a": "it is not foolproof.mp3",
+      "t": "it's not foolproof",
+      "m": ["简单易用的"],
+      "w": ["foolproof"]
+    },
+    
+    {
+      "a": "he was so clutch.mp3",
+      "t": "You should've seen him on the football field. He was so clutch. He always kept his head. He didn't keep his head yesterday. What did you expect?",
+      "m": ["he was so clutch: 关键时刻的关键人物；Perfect, Exactly what is needed.", "keep one's head: 保持冷静"],
+      "w": ["clutch"]
+    },
+    
+    {
+      "a": "",
+      "t": "",
+      "m": [""],
+      "w": []
+    },
+    
+    {
+      "a": "",
+      "t": "",
+      "m": [""],
+      "w": []
+    }
+
+
+  ]
+}
+
+
+
